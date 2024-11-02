@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+
+# Sample Data
+temperature = [88, 75]  # Add more temperatures if needed
+density = [814, 834]  # Density values
+kinematic_viscosity = [18.01, 27.71]  # Kinematic viscosity values
+dynamic_viscosity = [0.01465, 0.02311]  # Dynamic viscosity values
+
+# Plotting Density vs. Temperature
+plt.figure(figsize=(10, 6))
+plt.subplot(3, 1, 1)
+plt.plot(temperature, density, marker='o', color='b')
+plt.xlabel('Temperature (°C)')
+plt.ylabel('Density (kg/m³)')
+plt.title('Density vs Temperature')
+
+# Plotting Kinematic Viscosity vs. Temperature
+plt.subplot(3, 1, 2)
+plt.plot(temperature, kinematic_viscosity, marker='o', color='g')
+plt.xlabel('Temperature (°C)')
+plt.ylabel('Kinematic Viscosity (cSt)')
+plt.title('Kinematic Viscosity vs Temperature')
+
+# Plotting Dynamic Viscosity vs. Temperature
+plt.subplot(3, 1, 3)
+plt.plot(temperature, dynamic_viscosity, marker='o', color='r')
+plt.xlabel('Temperature (°C)')
+plt.ylabel('Dynamic Viscosity (Pa·s)')
+plt.title('Dynamic Viscosity vs Temperature')
+
+plt.tight_layout()
+plt.show()
